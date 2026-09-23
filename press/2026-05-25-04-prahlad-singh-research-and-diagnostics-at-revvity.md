@@ -1,7 +1,9 @@
 ---
 title: Prahlad Singh – Research & Diagnostics At Revvity ( ...
 url: https://www.instagram.com/p/DXCpPhGFAY5/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"PerkinElmer" press release artificial intelligence'
 position: 4
 source: serpapi-google

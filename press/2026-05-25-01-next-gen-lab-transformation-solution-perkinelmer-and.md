@@ -1,7 +1,9 @@
 ---
 title: 'Next-Gen Lab Transformation solution: PerkinElmer & ...'
 url: https://www.persistent.com/client-success/persistent-helps-perkinelmer-develop-a-next-gen-laboratory-transformation-solution/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"PerkinElmer" press release artificial intelligence'
 position: 1
 source: serpapi-google
