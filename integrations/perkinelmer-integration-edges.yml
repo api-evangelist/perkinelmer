@@ -28,9 +28,60 @@ edges:
       level: Full Validation
   detected_by: sweep-regulated-retail.py
   first_seen: '2026-10-18'
+- partner_name: FDA 510(k) premarket notifications (IVD / surgical panels)
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K203035
+  category: FDA-cleared IVD / surgical device
+  contract_reference:
+    register: openFDA device/510k (decision_date >= 2016-01-01; panels CH HE IM MI PA TX SU OR)
+    standard: FDA 510(k) premarket clearance (IVD / surgical panels)
+    spec_file: null
+    role: fda-510k-holder
+    registered_name: Perkinelmer, Inc.
+    matched_domain: perkinelmer.com
+    matched_by: domain
+    detected_by: sweep-ivd-diagnostics.py
+    detected: '2026-10-21'
+    register_id: K203035
+    certified_products:
+    - product: FDA 510(k) clearance, Clinical Chemistry panel
+      product_type: Clinical Chemistry
+      review_panel: CH
+      lapsed: false
+      latest_decision: '2020-02-07'
+      devices_sample:
+      - GSP Neonatal Creatine Kinase - MM kit
+      - GSP Neonatal Total Galactose kit
+      - NeoBase 2 Non-derivatized MSMS Kit
+      - NeoLSD MSMS Kit
+    - product: FDA 510(k) clearance, Immunology panel
+      product_type: Immunology
+      review_panel: IM
+      lapsed: false
+      latest_decision: '2022-11-09'
+      devices_sample:
+      - Eonis SCID-SMA Kit
+      - Eonis SCID-SMA kit
+    signal_note: certified_products = one entry per FDA review PANEL held, never per device; openFDA carries decisions,
+      not withdrawals, so lapsed is always false
+    identity: wikidata Q2066858 'PerkinElmer' P856 https://www.perkinelmer.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-ivd-diagnostics.py
+  first_seen: '2026-10-21'
 generated: '2026-10-18'
 method: searched
 source:
 - https://www.metrc.com/validated-integrators/
 checked:
 - https://www.metrc.com/validated-integrators/
+- https://api.fda.gov/device/510k.json
+- https://api.fda.gov/device/pma.json
+- https://api.fda.gov/device/registrationlisting.json
+- https://ec.europa.eu/tools/eudamed/api/
+- https://www.accessdata.fda.gov/premarket/ftparea/clia_detail.zip
+- https://www.advamed.org/advameddx/members/
